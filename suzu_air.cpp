@@ -18,56 +18,60 @@ using namespace std;
 // -- MAIN FUNCTION -- //
 int main() {
     // Create variables
-	int i, price, ticket, total, pay;
+    int i, price, ticket, total, pay;
 
-	// Create list for flight codes & prices
-	string flight_codes[5] = {"BDG-JPG  >  Bandung-Jepang   ",
-   							  "ING-SRB  >  Inggris-Surabaya ",
-   							  "KMB-LOM  >  Kamboja-Lombok   ",
-                             "MLY-BDG  >  Malaysia-Bandung ",
-                             "SIN-JKT  >  Singapura-Jakarta"};
-   string flight_prices[5] = {"2.850.000",
-   							  "2.200.000",
-                              "1.750.000",
-                              "1.440.000",
-                              "1.580.000"};
+    // Create list for flight codes & prices
+    string flight_codes[5] = {
+        "BDG-JPG  >  Bandung-Jepang   ",
+        "ING-SRB  >  Inggris-Surabaya ",
+   		"KMB-LOM  >  Kamboja-Lombok   ",
+        "MLY-BDG  >  Malaysia-Bandung ",
+        "SIN-JKT  >  Singapura-Jakarta"
+    };
+    string flight_prices[5] = {
+        "2.850.000",
+        "2.200.000",
+        "1.750.000",
+        "1.440.000",
+        "1.580.000"
+    };
+
 	// Create price list
-   const int prices_list[5] = {
+    const int prices_list[5] = {
         2850000,
         2200000,
         1750000,
         1440000,
         1580000
-   };
-    
+    };
 
-	
-   RESET: /* create label for loop retry */
-	
-   // Display list flight schedules
-   clrscr(); /* clear screen */
-   gotoxy(18, 2); // memindahkan kursor ke tempat x, y yg ditentukan
-   cout << "-------------------------------" << endl;
-   gotoxy(18, 3);
-   cout << "|       SUZUMI AIRLINES       |" << endl;
-   gotoxy(18, 4);
-   cout << "-------------------------------" << endl;
 
-   gotoxy(4, 6);
-   cout << "-----------------------------------------------------------" << endl;
-   gotoxy(4, 7);
-   cout << "|  No.  |         Kode Penerbangan        |     Harga     |" << endl;
-   gotoxy(4, 8);
-   cout << "-----------------------------------------------------------" << endl;
+    RESET: /* create label for loop retry */
 
-   i = 0;
-   for (int index = 0; index < 5; index++) { // menggunakan looping utk meng-iterate list satu-satu
-       gotoxy(4, 9+i);
-	   cout << "| *[" << ++i << "]  |  ";
-	   cout << flight_codes[index] << "  | " << flight_prices[index] << " IDR |" << endl;
-   }
-   gotoxy(4, 14);
-   cout << "-----------------------------------------------------------" << endl << endl;
+    // Display list flight schedules
+    clrscr(); /* clear screen */
+    gotoxy(18, 2); // memindahkan kursor ke tempat x, y yg ditentukan
+    cout << "-------------------------------" << endl;
+    gotoxy(18, 3);
+    cout << "|       SUZUMI AIRLINES       |" << endl;
+    gotoxy(18, 4);
+    cout << "-------------------------------" << endl;
+
+    gotoxy(4, 6);
+    cout << "-----------------------------------------------------------" << endl;
+    gotoxy(4, 7);
+    cout << "|  No.  |         Kode Penerbangan        |     Harga     |" << endl;
+    gotoxy(4, 8);
+    cout << "-----------------------------------------------------------" << endl;
+
+    i = 0;
+    for (int index = 0; index < 5; index++) { // menggunakan looping utk meng-iterate list satu-satu
+        gotoxy(4, 9+i);
+	    cout << "| *[" << ++i << "]  |  ";
+	    cout << flight_codes[index] << "  | " << flight_prices[index] << " IDR |" << endl;
+    }
+    gotoxy(4, 14);
+    cout << "-----------------------------------------------------------" << endl << endl;
 	
 	
     // Create user input (index ticket)
