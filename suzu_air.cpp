@@ -24,7 +24,7 @@ int main() {
     string flight_codes[5] = {
         "BDG-JPG  >  Bandung-Jepang   ",
         "ING-SRB  >  Inggris-Surabaya ",
-   		"KMB-LOM  >  Kamboja-Lombok   ",
+   	"KMB-LOM  >  Kamboja-Lombok   ",
         "MLY-BDG  >  Malaysia-Bandung ",
         "SIN-JKT  >  Singapura-Jakarta"
     };
