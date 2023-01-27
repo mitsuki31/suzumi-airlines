@@ -36,7 +36,7 @@ int main() {
         "1.580.000"
     };
 
-	// Create price list
+    // Create price list
     const int prices_list[5] = {
         2850000,
         2200000,
@@ -75,14 +75,14 @@ int main() {
 	
 	
     // Create user input (index ticket)
-	char user_choice; // char hanya dapat menyimpan satu karakter saja
-	cout << "[*] Selamat datang di Suzumi Airlines" << endl << endl;
-	cout << "( Masukan No. Ticket [1 - 5] )~[int]" << endl;
-	cout << ">>> ";
-	user_choice = getche(); // get char & echo (output)
-	cout << endl;
+    char user_choice; // char hanya dapat menyimpan satu karakter saja
+    cout << "[*] Selamat datang di Suzumi Airlines" << endl << endl;
+    cout << "( Masukan No. Ticket [1 - 5] )~[int]" << endl;
+    cout << ">>> ";
+    user_choice = getche(); // get char & echo (output)
+    cout << endl;
 	
-	// Check user input
+    // Check user input
     switch (user_choice) {
         case '1':
             price = prices_list[0];
@@ -111,10 +111,10 @@ int main() {
     
     // Create user input (total ticket)
     cout << "( Masukan Jumlah Tiket )~[int]" << endl;
-	cout << ">>> ";
-	cin >> ticket;
+    cout << ">>> ";
+    cin >> ticket;
 	
-	// Check user input
+    // Check user input
     if (ticket == 0) goto RESET; // menuju awal
     
     // Calculate total price
@@ -125,18 +125,18 @@ int main() {
     
     // Create user input (pay)
     cout << "( Silahkan Masukan Pembayaran )~[int]" << endl;
-	cout << ">>> ";
-	cin >> pay;
-	cout << endl;
+    cout << ">>> ";
+    cin >> pay;
+    cout << endl;
 	
-	
-	// Check user input
-	if (pay < total) {
-	    cout << "[!] System: Maaf, uang Anda tidak mencukupi" << endl << endl;
-	    cout << "Press any key to exit...";
-	    getch(); // get char
-	    exit(1);
-	}
+
+    // Check user input
+    if (pay < total) {
+        cout << "[!] System: Maaf, uang Anda tidak mencukupi" << endl << endl;
+	cout << "Press any key to exit...";
+	getch(); // get char
+	exit(1);
+    }
     
     // Output
     clrscr();
