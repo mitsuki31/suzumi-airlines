@@ -9,7 +9,7 @@
 #include <iostream>  // C++ Language
 #include <string>    // String Library
 #include <stdlib.h>  // Standard Library
-#include <conio>     // Control I/O
+#include <conio>     // Console I/O
 
 // -- Namespace -- //
 using namespace std;
